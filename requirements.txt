@@ -1,0 +1,10 @@
+Django==1.6.5
+TwitterSearch==0.78.4
+django-toolbelt==0.0.1
+gunicorn==19.0.0
+oauthlib==0.6.3
+python-twitter==2.0
+requests==2.3.0
+requests-oauthlib==0.4.1
+simplejson==3.6.0
+wsgiref==0.1.2
