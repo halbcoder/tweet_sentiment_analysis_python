@@ -4,6 +4,7 @@ from tweet_sentiment_analysis.views import *
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
+from django.views.generic.base import RedirectView
 
 from django.contrib import admin
 admin.autodiscover()
@@ -14,6 +15,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^/$', RedirectView.as_view(url='/tweet_list/1')),
     url(r'^tweet_list/(\d*)/$', tweet_list, name="list"),
     url(r'^tweet_details/(\d*)/$', tweet_details, name="details"),
 )
